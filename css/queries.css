@@ -1,0 +1,344 @@
+/* rem and em do NOT depend on html font size in media queries
+Instead, 1rem - 1em - 16px
+*/
+
+/**************************/
+/* BELOW 1312px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 82em) {
+  html {
+    /* 8/16 -  0.5*/
+    font-size: 50%;
+  }
+}
+
+/**************************/
+/* BELOW 1107px (Landscape tablet) */
+/**************************/
+
+@media (max-width: 70em) {
+  /* html {
+    font-size: 46rem;
+  } */
+
+  .hero-image img {
+    width: 50%;
+  }
+
+  .container {
+    padding: 0px 2.4rem;
+  }
+
+  .about-title {
+    width: 280px;
+  }
+  .blog--sections {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3.2rem;
+    justify-items: center;
+    margin-top: 9.4rem;
+  }
+
+  .spann--1 {
+    grid-column: span 2;
+  }
+  .about-image img {
+    width: 28rem;
+  }
+  .testimonial-page {
+    column-gap: 3.2rem;
+  }
+  .link-to-portfolio:link {
+    padding-top: 9.6rem;
+  }
+
+  .about-image img {
+    width: 25rem;
+  }
+
+  .right-align {
+    /* justify-content: flex-end; */
+    width: 40%;
+  }
+
+  .left-align {
+    width: 60%;
+  }
+
+  /* .grid-3--cols {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+}
+/* .blog--sections {
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+/**************************/
+/* BELOW 810px (tablet) */
+/**************************/
+
+@media (max-width: 51em) {
+  html {
+    /* 7px/16 = 0.4375 =43.75% */
+    font-size: 43.75%;
+  }
+  .teams {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.4rem;
+  }
+  .team {
+    padding: 3.6rem;
+  }
+
+  .image1 {
+    width: 32rem;
+    padding-bottom: 2rem;
+  }
+  .image2 {
+    width: 61%;
+    transform: translate(-20%, 4%);
+  }
+
+  .blog-section {
+    width: none;
+  }
+  .spann--1 {
+    width: 300px;
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+
+  .about-page {
+    column-gap: 2.6rem;
+  }
+
+  .primary-title {
+    padding-top: 3.4rem;
+  }
+
+  .right-align {
+    /* justify-content: flex-end; */
+    width: 60%;
+  }
+
+  .left-align {
+    width: 40%;
+  }
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 42em) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 9rem;
+    height: 80rem;
+    align-items: center;
+  }
+
+  .header {
+    padding: 0 2.8rem;
+  }
+
+  .hero-image {
+    /* position: absolute; */
+    width: 100%;
+  }
+
+  .about-page {
+    grid-template-columns: 1fr;
+  }
+
+  .blog--sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+
+  /* MOBILE  */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.977);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+
+    /* Hide navigation */
+    /* display: none; */
+    /* Transition do not work when display is set to none also animations do not work */
+
+    /* to hide nav properly/visually */
+    /* Correct way to hide the element */
+    opacity: 0;
+
+    /* 2) make it accessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 577px (Phones) */
+/**************************/
+
+@media (max-width: 36em) {
+  .grid-3--cols {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .second-child {
+    transform: translateY(0rem);
+  }
+
+  .third-child {
+    transform: translateY(0rem);
+  }
+
+  .fift-child {
+    transform: translateY(0rem);
+  }
+
+  .sixt-child {
+    transform: translateY(0rem);
+  }
+
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  .align-box-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-image-project:nth-child(2),
+  .project--1 {
+    grid-row: 3;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.4rem;
+  }
+
+  .service--footer {
+    grid-row: 1;
+  }
+
+  .footer--bottom {
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+  .primary-title,
+  .primary-sub-title,
+  .intro-title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 28em) {
+  .teams,
+  .testimonial-page,
+  .grid--footer {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-page {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 15.6rem;
+  }
+  .image1 {
+    position: absolute;
+    left: 0;
+    transform: translate(0, 88%);
+    width: 65%;
+  }
+
+  .image2 {
+    width: 52%;
+    transform: translate(-38%, -40%);
+  }
+
+  .testimonial-image {
+    position: relative;
+  }
+
+  .contact {
+    padding-top: 36rem;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
